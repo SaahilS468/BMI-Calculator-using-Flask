@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DELETE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <div class="container">
+    <h1>Delete a student's data</h1>
+    <form method="post">
+        <p>
+            Roll:
+            <input type="text" name="roll">
+        </p>
+        <a href="url_for('show_rec')"><button class="create_btn" type="submit">Delete</button></a>
+    </form>
+    </div>
+</body>
+</html>

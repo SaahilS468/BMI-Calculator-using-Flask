@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <h1>Details of {{ name }}</h1>
+    <table>
+        <thead>
+            <th>Rollno</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Weight</th>
+            <th>Height</th>
+            <th>BMI</th>
+            <th>BMR</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+            <tr>
+            {% for data in result %}
+                    <td>{{ data }}</td>
+            {% endfor %}
+            </tr>
+        <tbody>
+    </table>
+</body>
+</html>

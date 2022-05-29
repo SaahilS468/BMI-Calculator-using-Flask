@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Add new student data</h1>
+    <form method="post">
+        <p>
+            Name:
+            <input type="text" name="name">
+        </p>
+        <p>
+            Roll:
+            <input type="text" name="roll">
+        </p>
+        <p>
+            Age:
+            <input type="text" name="age">
+        </p>
+        <p>
+            Gender:
+            <input type="text" name="gender" placeholder="M/F">
+        </p>
+        <p>
+            Weight:
+            <input type="text" name="weight">
+        </p>
+        <p>
+            Height:
+            <input type="text" name="height" placeholder="In cms">
+        </p>
+        <a href="url_for('show_rec')"><button class="create_btn" type="submit">Create</button></a>
+    </form>
+    </div>
+</body>
+</html>

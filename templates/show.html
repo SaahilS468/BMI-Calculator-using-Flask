@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOWALL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <div class="main">
+    <h1>Welcome to BMI Calculator</h1>
+    <h1>Students:-</h1>
+    <a href=" {{ url_for('add_rec') }}"><button class="create_btn">Add</button></a>
+    <a href=" {{ url_for('update_rec') }}"><button class="create_btn">Update</button></a>
+    <a href=" {{ url_for('del_rec') }}"><button class="create_btn">Delete</button></a>
+
+<!--    <form action="POST">-->
+<!--        <input class="search_input" type="text" name="search" placeholder="Search">-->
+<!--        <a href="url_for('search')"><button class="search_btn">Search</button></a>-->
+<!--    </form>-->
+
+    <table>
+        <thead>
+            <th>Rollno</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Weight</th>
+            <th>Height</th>
+            <th>BMI</th>
+            <th>BMR</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+        {% for student in students %}
+            <tr>
+            {% for l in range(9) %}
+                    <td>{{ student[l] }}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+        <tbody>
+    </table>
+    </div>
+</body>
+</html>
